@@ -1894,9 +1894,9 @@ head.appendChild(script);
   <div class='clear'/>
 </b:includable>
       <b:includable id='post' var='post'>
-  <article class='post hentry'>
+  <article class='post hentry' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <b:if cond='data:post.firstImageUrl'>
-      <meta expr:content='data:post.firstImageUrl'/>
+      <meta expr:content='data:post.firstImageUrl' itemprop='image' itemprop='image_url'/>
     </b:if>
 
 	
@@ -1959,7 +1959,7 @@ head.appendChild(script);
 		<span class='admin-meta vcard'>
             <b:if cond='data:post.authorProfileUrl'>
               <span class='fn'>
-                <meta expr:content='data:post.authorProfileUrl'/>
+                <meta expr:content='data:post.authorProfileUrl' itemprop='url'/>
                 <a class='g-profile' expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>
                   <span><data:post.author/></span>
                 </a>
@@ -1974,7 +1974,7 @@ head.appendChild(script);
       <b:if cond='data:top.showTimestamp'>
 		<span class='date-meta'>
         <b:if cond='data:post.url'>
-          <meta expr:content='data:post.canonicalUrl'/>
+          <meta expr:content='data:post.canonicalUrl' itemprop='url'/>
           <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published updated' expr:title='data:post.timestampISO8601'><data:post.timestamp/></abbr></a>
         </b:if>
 		</span> 
