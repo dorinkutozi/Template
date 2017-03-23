@@ -1917,7 +1917,7 @@ head.appendChild(script);
     </b:if>
 	</b:if>
 	
-    <a expr:name='data:post.id'/>
+    <a expr:id='data:post.id'/>
     <b:if cond='data:post.title'>
 	    <b:if cond='data:blog.pageType == &quot;index&quot;'>
           <h2 class='post-title entry-title' itemprop='name'>
