@@ -2590,8 +2590,8 @@ head.appendChild(script);
         <a expr:href='data:userUrl'><img class='profile-img' expr:alt='data:photo.alt' expr:height='data:photo.height' expr:src='data:photo.url' expr:width='data:photo.width'/></a>
       </b:if>
 
-      <dl class='profile-datablock'>
-        <dt class='profile-data'>
+      <div class='profile-datablock'>
+        <div class='profile-data'>
           <a class='profile-name-link g-profile' expr:href='data:userUrl' expr:style='&quot;background-image: url(&quot; + data:profileLogo + &quot;);&quot;' rel='author'>
             <data:displayname/>
           </a>
@@ -2599,14 +2599,14 @@ head.appendChild(script);
             <br/>
             <div class='g-follow' data-annotation='bubble' data-height='20' expr:data-href='data:userUrl'/>
           </b:if>
-        </dt>
+        </div>
 
         <b:if cond='data:showlocation == &quot;true&quot;'>
           <dd class='profile-data'><data:location/></dd>
         </b:if>
 
         <b:if cond='data:aboutme != &quot;&quot;'><dd class='profile-textblock'><data:aboutme/></dd></b:if>
-      </dl>
+      </div>
       <a class='profile-link' expr:href='data:userUrl' rel='author'><data:viewProfileMsg/></a>
     </b:if>
 
