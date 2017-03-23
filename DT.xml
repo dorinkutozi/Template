@@ -1419,7 +1419,7 @@ head.appendChild(script);
         <b:if cond='data:blog.pageType == &quot;item&quot;'>
         <b:loop values='data:posts' var='post'>
         <b:if cond='data:post.labels'>
-        <div class='breadcrumbs'><span itemscope='' itemtype='http://data-vocabulary.org/Breadcrumb'><a expr:href='data:blog.homepageUrl' itemprop='url'><span itemprop='title'>Home</span></a></span> &#187; <b:loop values='data:post.labels' var='label'><span itemscope='' itemtype='http://data-vocabulary.org/Breadcrumb'><a expr:href='data:label.url + &quot;?&amp;max-results=8&quot;' itemprop='url'><span itemprop='title'><data:label.name/></span></a></span><b:if cond='data:label.isLast != &quot;true&quot;'> &#187; </b:if> </b:loop> &#187; <span><data:post.title/></span>
+        <div class='breadcrumbs'><span itemscope='' itemtype='http://data-vocabulary.org/Breadcrumb'><a expr:href='data:blog.homepageUrl'><span>Home</span></a></span> &#187; <b:loop values='data:post.labels' var='label'><span itemscope='' itemtype='http://data-vocabulary.org/Breadcrumb'><a expr:href='data:label.url + &quot;?&amp;max-results=8&quot;'><span><data:label.name/></span></a></span><b:if cond='data:label.isLast != &quot;true&quot;'> &#187; </b:if> </b:loop> &#187; <span><data:post.title/></span>
         </div>
         <b:else/>
         <div class='breadcrumbs'><span><a expr:href='data:blog.homepageUrl' rel='nofollow'>Home</a></span> &#187; <span>Uncategories</span> &#187; <span><data:post.title/></span></div>
@@ -1672,7 +1672,7 @@ head.appendChild(script);
 
     <div class='mobile-post-outer'>
       <a expr:href='data:post.url'>
-        <h3 class='mobile-index-title entry-title' itemprop='name'>
+        <h3 class='mobile-index-title entry-title'>
           <data:post.title/>
         </h3>
 	  </a>
@@ -1767,16 +1767,16 @@ head.appendChild(script);
     <div class='date-posts'>
       <div class='post-outer'>
 
-        <div class='post hentry uncustomized-post-template' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+        <div class='post hentry uncustomized-post-template'>
           <b:if cond='data:post.thumbnailUrl'>
-            <meta expr:content='data:post.thumbnailUrl' itemprop='image_url'/>
+            <meta expr:content='data:post.thumbnailUrl'/>
           </b:if>
-          <meta expr:content='data:blog.blogId' itemprop='blogId'/>
-          <meta expr:content='data:post.id' itemprop='postId'/>
+          <meta expr:content='data:blog.blogId'/>
+          <meta expr:content='data:post.id'/>
 
           <a expr:id='data:post.id'/>
           <b:if cond='data:post.title'>
-            <h3 class='post-title entry-title' itemprop='name'>
+            <h3 class='post-title entry-title'>
               <b:if cond='data:post.link'>
                 <a expr:href='data:post.link'><data:post.title/></a>
               <b:else/>
@@ -1797,7 +1797,7 @@ head.appendChild(script);
             <div class='post-header-line-1'/>
           </div>
 
-          <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+          <div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id'>
             <data:post.body/>
             <div style='clear: both;'/> <!-- clear for photos floats -->
           </div>
@@ -1807,15 +1807,15 @@ head.appendChild(script);
               <span class='post-author vcard'>
                 <b:if cond='data:top.showAuthor'>
                   <b:if cond='data:post.authorProfileUrl'>
-                    <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
-                      <meta expr:content='data:post.authorProfileUrl' itemprop='url'/>
+                    <span class='fn'>
+                      <meta expr:content='data:post.authorProfileUrl'/>
                       <a expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>
-                        <span itemprop='name'><data:post.author/></span>
+                        <span><data:post.author/></span>
                       </a>
                     </span>
                   <b:else/>
-                    <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
-                      <span itemprop='name'><data:post.author/></span>
+                    <span class='fn'>
+                      <span><data:post.author/></span>
                     </span>
                   </b:if>
                 </b:if>
@@ -1825,8 +1825,8 @@ head.appendChild(script);
                 <b:if cond='data:top.showTimestamp'>
                   <data:top.timestampLabel/>
                   <b:if cond='data:post.url'>
-                    <meta expr:content='data:post.canonicalUrl' itemprop='url'/>
-                    <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
+                    <meta expr:content='data:post.canonicalUrl'/>
+                    <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published' expr:title='data:post.timestampISO8601'><data:post.timestamp/></abbr></a>
                   </b:if>
                 </b:if>
               </span>
@@ -1894,9 +1894,9 @@ head.appendChild(script);
   <div class='clear'/>
 </b:includable>
       <b:includable id='post' var='post'>
-  <article class='post hentry' itemprop='blogPost' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
+  <article class='post hentry'>
     <b:if cond='data:post.firstImageUrl'>
-      <meta expr:content='data:post.firstImageUrl' itemprop='image'/>
+      <meta expr:content='data:post.firstImageUrl'/>
     </b:if>
 
 	
@@ -1920,7 +1920,7 @@ head.appendChild(script);
     <a expr:id='data:post.id'/>
     <b:if cond='data:post.title'>
 	    <b:if cond='data:blog.pageType == &quot;index&quot;'>
-          <h2 class='post-title entry-title' itemprop='name'>
+          <h2 class='post-title entry-title'>
             <b:if cond='data:post.link'>
               <a expr:href='data:post.link'><data:post.title/></a>
             <b:else/>
@@ -1936,7 +1936,7 @@ head.appendChild(script);
             </b:if>
           </h2>
 	    <b:else/>
-        <h1 class='post-title entry-title' itemprop='name'>
+        <h1 class='post-title entry-title'>
           <b:if cond='data:post.link'>
             <a expr:href='data:post.link'><data:post.title/></a>
           <b:else/>
@@ -1958,15 +1958,15 @@ head.appendChild(script);
       <b:if cond='data:top.showAuthor'>
 		<span class='admin-meta vcard'>
             <b:if cond='data:post.authorProfileUrl'>
-              <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
-                <meta expr:content='data:post.authorProfileUrl' itemprop='url'/>
+              <span class='fn'>
+                <meta expr:content='data:post.authorProfileUrl'/>
                 <a class='g-profile' expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>
-                  <span itemprop='name'><data:post.author/></span>
+                  <span><data:post.author/></span>
                 </a>
               </span>
             <b:else/>
-              <span class='fn' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
-                <span itemprop='name'><data:post.author/></span>
+              <span class='fn'>
+                <span><data:post.author/></span>
               </span>
             </b:if>
 		</span> 
@@ -1974,8 +1974,8 @@ head.appendChild(script);
       <b:if cond='data:top.showTimestamp'>
 		<span class='date-meta'>
         <b:if cond='data:post.url'>
-          <meta expr:content='data:post.canonicalUrl' itemprop='url'/>
-          <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published updated' expr:title='data:post.timestampISO8601' itemprop='datePublished'><data:post.timestamp/></abbr></a>
+          <meta expr:content='data:post.canonicalUrl'/>
+          <a class='timestamp-link' expr:href='data:post.url' rel='bookmark' title='permanent link'><abbr class='published updated' expr:title='data:post.timestampISO8601'><data:post.timestamp/></abbr></a>
         </b:if>
 		</span> 
       </b:if>
@@ -2001,7 +2001,7 @@ head.appendChild(script);
     </div>
 
 	<b:if cond='data:blog.pageType == &quot;index&quot;'>	  
-		<div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='articleBody'>
+		<div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id'>
 			<div class='post-snippet'>
 			<data:post.snippet/>
 			</div>
@@ -2014,7 +2014,7 @@ head.appendChild(script);
 		</b:if>
 	<b:else/>
 		<!-- Then use the post body as the schema.org description, for good G+/FB snippeting. -->
-		<div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id' itemprop='description articleBody'>
+		<div class='post-body entry-content' expr:id='&quot;post-body-&quot; + data:post.id'>
 			<data:post.body/>
 			<div style='clear: both;'/> <!-- clear for photos floats -->
 			
@@ -2037,16 +2037,16 @@ head.appendChild(script);
 
 	<b:if cond='data:blog.pageType == &quot;item&quot;'>
 	<b:if cond='data:post.authorAboutMe'>
-	<div class='author-profile' itemprop='author' itemscope='itemscope' itemtype='http://schema.org/Person'>
+	<div class='author-profile'>
 	  <b:if cond='data:post.authorPhoto.url'>
-		<img expr:src='data:post.authorPhoto.url' itemprop='image' width='90px'/>
+		<img expr:src='data:post.authorPhoto.url' width='90px'/>
 	  </b:if>
 	  <div>
-		<a class='g-profile' expr:href='data:post.authorProfileUrl' itemprop='url' rel='author' title='author profile'>
-		  <span itemprop='name'><data:post.author/></span>
+		<a class='g-profile' expr:href='data:post.authorProfileUrl' rel='author' title='author profile'>
+		  <span><data:post.author/></span>
 		</a>
 	  </div>
-	  <span itemprop='description'><data:post.authorAboutMe/></span>
+	  <span><data:post.authorAboutMe/></span>
 	</div>
 	</b:if>
 	</b:if>
