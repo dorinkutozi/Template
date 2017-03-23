@@ -78,7 +78,9 @@
 
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
 
-<b:skin><![CDATA[/*
+&lt;style type=&quot;text/css&quot;&gt;
+&lt;!-- /*<b:skin><![CDATA[*/]]></b:skin>
+<style><![CDATA[*//*
 -----------------------------------------------
 Blogger Template Style
 Name    : DT Template
@@ -864,7 +866,7 @@ a.home-link {
 
 
 
-]]></b:skin>
+/*]]>*/</style>
 
 <b:if cond='data:blog.pageType == &quot;static_page&quot;'>
 <style>
