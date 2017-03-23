@@ -1896,7 +1896,7 @@ head.appendChild(script);
       <b:includable id='post' var='post'>
   <article class='post hentry' itemscope='itemscope' itemtype='http://schema.org/BlogPosting'>
     <b:if cond='data:post.firstImageUrl'>
-      <meta expr:content='data:post.firstImageUrl' itemprop='image' itemprop='image_url'/>
+      <meta expr:content='data:post.firstImageUrl' itemprop='image'/>
     </b:if>
 
 	
