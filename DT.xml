@@ -1284,7 +1284,7 @@ head.appendChild(script);
 	  <li><a href='/p/lorem-ipsum-dolor-sit-amet-consectetur.html'>Static Page</a></li>
 	</ul>
 	
-	<form action='/search' id='search-form' method='get' style='display: inline;'><input id='search-box' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;;' type='text' value='Search...' vinput=''/> <input id='search-button' type='submit' value='Go'/></form>
+	<form action='/search' id='search-form' method='get' style='display: inline;'><input id='search-box' name='q' onblur='if(this.value==&apos;&apos;)this.value=this.defaultValue;' onfocus='if(this.value==this.defaultValue)this.value=&apos;&apos;;' type='text' value='Search...'/> <input id='search-button' type='submit' value='Go'/></form>
 	
   </nav>
   <!-- end of primary navigation -->
