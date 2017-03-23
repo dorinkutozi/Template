@@ -1774,7 +1774,7 @@ head.appendChild(script);
           <meta expr:content='data:blog.blogId' itemprop='blogId'/>
           <meta expr:content='data:post.id' itemprop='postId'/>
 
-          <a expr:name='data:post.id'/>
+          <a expr:id='data:post.id'/>
           <b:if cond='data:post.title'>
             <h3 class='post-title entry-title' itemprop='name'>
               <b:if cond='data:post.link'>
