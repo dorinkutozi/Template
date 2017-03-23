@@ -4,21 +4,10 @@
 <head>
 
 <!--[if lt IE 9]>
-<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"> </script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js'> </script>
 <![endif]-->
-<meta content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1' name='viewport'/>
-<meta content='text/html;charset=UTF-8' http-equiv='Content-Type'/>
-<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'/> 
-<b:include data='blog' name='all-head-content'/>
 
-<!-- SEO Meta Tag -->
-<b:if cond='data:blog.homepageUrl == data:blog.url'><meta expr:content='data:blog.title' name='keywords'/></b:if>	   
-<b:if cond='data:blog.pageType == &quot;item&quot;'><meta expr:content='data:blog.pageName' name='keywords'/></b:if>
-<b:if cond='data:blog.pageType == &quot;index&quot;'><b:if cond='data:blog.searchLabel'><meta content='noindex,nofollow' name='robots'/></b:if></b:if>
-<b:if cond='data:blog.pageType == &quot;archive&quot;'><meta content='noindex,nofollow' name='robots'/></b:if>
-<b:if cond='data:blog.isMobile'><meta content='noindex,nofollow' name='robots'/></b:if>
-
-<!-- SEO Title Tag -->
+<!-- Meta Title -->
 <b:if cond='data:blog.url == data:blog.homepageUrl'><title><data:blog.title/></title></b:if>
 <b:if cond='data:blog.pageType == &quot;item&quot;'><title><data:blog.pageName/> - <data:blog.title/></title></b:if>
 <b:if cond='data:blog.pageType == &quot;archive&quot;'><title>Archive for <data:blog.pageName/></title></b:if>
@@ -26,6 +15,66 @@
 <b:if cond='data:blog.pageType == &quot;index&quot;'><b:if cond='data:blog.searchLabel'><title><data:blog.title/> - <data:blog.pageName/></title></b:if></b:if>
 <b:if cond='data:blog.pageType == &quot;error_page&quot;'><title>Page Not Found</title></b:if>
 <b:if cond='data:blog.pageType == &quot;index&quot;'><b:if cond='data:blog.url != data:blog.homepageUrl'><title><data:blog.pageTitle/> - All Post</title></b:if></b:if>
+
+<!-- All Meta -->
+<meta content='blogger' name='generator'/>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'/>
+<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+<meta content='Dorinkutozi' name='author'/>
+<meta content='follow, all' name='alexabot'/>
+<meta content='-5;120' name='geo.position'/>
+<meta content='2017, Dorinkutozi' name='copyright'/>
+<meta content='id' name='language'/>
+<meta content='Indonesia' name='geo.placename'/>
+<meta content='global' name='target'/>
+<meta content='Indonesia' name='geo.country'/>
+<meta content='all, follow' name='robots'/>
+<meta content='all' name='googlebot'/>
+<meta content='all' name='msnbot'/>
+<meta content='all' name='Googlebot-Image'/>
+<meta content='all' name='Slurp'/>
+<meta content='all' name='ZyBorg'/>
+<meta content='all' name='Scooter'/>
+<meta content='ALL' name='spiders'/>	
+<meta content='general' name='rating'/>
+<meta content='2 days' name='revisit-after'/>
+<meta content='2 days' name='revisit'/>
+<meta content='all' name='WEBCRAWLERS'/>
+	
+<!-- Meta Tag Keyword -->
+<b:if cond='data:blog.homepageUrl == data:blog.url'><meta expr:content='data:blog.title' name='keywords'/></b:if>	   
+<b:if cond='data:blog.pageType == &quot;item&quot;'><meta expr:content='data:blog.pageName' name='keywords'/></b:if>
+<b:if cond='data:blog.pageType == &quot;index&quot;'><b:if cond='data:blog.searchLabel'><meta content='noindex,nofollow' name='robots'/></b:if></b:if>
+<b:if cond='data:blog.pageType == &quot;archive&quot;'><meta content='noindex,nofollow' name='robots'/></b:if>
+<b:if cond='data:blog.isMobile'><meta content='noindex,nofollow' name='robots'/></b:if>
+<b:if cond='data:blog.postImageThumbnailUrl'>
+<meta expr:content='data:blog.postImageThumbnailUrl' property='og:image'/>
+<meta expr:content='data:blog.postImageThumbnailUrl' name='twitter:image'/>
+<link expr:href='data:blog.postImageThumbnailUrl' rel='image_src'/>
+</b:if>
+	
+<!-- Metadata Social Media -->
+<meta expr:content='data:blog.title' property='og:site_name'/>
+<meta expr:content='data:blog.pageTitle' property='og:title'/>
+<meta content='article' property='og:type'/>
+<meta expr:content='data:blog.url' property='og:url'/>
+<meta content='summary' name='twitter:card'/>
+<meta expr:content='data:blog.pageTitle' name='twitter:title'/>
+<meta content='xxx' property='fb:app_id'/>
+<meta content='xxx' name='twitter:site'/>
+<meta content='xxx' name='twitter:creator'/>
+<link href='https://plus.google.com/xxx/about' rel='author'/>
+<link href='https://plus.google.com/xxx/posts' rel='publisher'/>
+<link href='https://plus.google.com/xxx/' rel='me'/>
+<link expr:href='data:blog.homepageUrl + &quot;favicon.ico&quot;' rel='icon' type='image/x-icon'/>
+<link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+<link expr:href='data:blog.homepageUrl + &quot;feeds/posts/default?alt=rss&quot;' expr:title='data:blog.title + &quot; - RSS&quot;' rel='alternate' type='application/rss+xml'/>
+<link expr:href='&quot;http://www.blogger.com/feeds/&quot; + data:blog.blogId + &quot;/posts/default&quot;' expr:title='data:blog.title + &quot; - Atom&quot;' rel='alternate' type='application/atom+xml'/>
+<link href='http://www.blogger.com/openid-server.g' rel='openid.server'/>
+<link expr:href='data:blog.homepageUrl' rel='openid.delegate'/>
+<link expr:href='data:blog.url' rel='canonical'/>
+<script type='application/ld+json'>{ &quot;@context&quot;: &quot;http://schema.org&quot;, &quot;@type&quot;: &quot;WebSite&quot;, &quot;url&quot;: &quot;<data:blog.homepageUrl/>&quot;, &quot;potentialAction&quot;: { &quot;@type&quot;: &quot;SearchAction&quot;, &quot;target&quot;: &quot;<data:blog.homepageUrl/>?q={search_term}&quot;, &quot;query-input&quot;: &quot;required name=search_term&quot; } }</script>
 
 <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
 
