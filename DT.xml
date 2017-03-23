@@ -76,11 +76,9 @@
 <link expr:href='data:blog.url' rel='canonical'/>
 <script type='application/ld+json'>{ &quot;@context&quot;: &quot;http://schema.org&quot;, &quot;@type&quot;: &quot;WebSite&quot;, &quot;url&quot;: &quot;<data:blog.homepageUrl/>&quot;, &quot;potentialAction&quot;: { &quot;@type&quot;: &quot;SearchAction&quot;, &quot;target&quot;: &quot;<data:blog.homepageUrl/>?q={search_term}&quot;, &quot;query-input&quot;: &quot;required name=search_term&quot; } }</script>
 
-<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'/>
-
 &lt;style type=&quot;text/css&quot;&gt;
 &lt;!-- /*<b:skin><![CDATA[*/]]></b:skin>
-<style><![CDATA[*//*
+<style>/*<![CDATA[*//*
 -----------------------------------------------
 Blogger Template Style
 Name    : DT Template
@@ -2638,7 +2636,7 @@ head.appendChild(script);
 
   
   
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js'/>
+<script src='//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'/>
 <script type='text/javascript'>
 $(function() {
 $(&quot;.set-1&quot;).mtabs();                                
@@ -2659,5 +2657,14 @@ var ww=document.body.clientWidth;$(document).ready(function(){$(".nav-menu li a"
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=&quot;//platform.twitter.com/widgets.js&quot;;fjs.parentNode.insertBefore(js,fjs);}}(document,&quot;script&quot;,&quot;twitter-wjs&quot;);
 </script>
 
-  </body>
+	  <!-- Defer CSS EXT -->
+<script>
+//<![CDATA[
+function loadCSS(e, t, n) { "use strict"; var i = window.document.createElement("link"); var o = t || window.document.getElementsByTagName("script")[0]; i.rel = "stylesheet"; i.href = e; i.media = "only x"; o.parentNode.insertBefore(i, o); setTimeout(function () { i.media = n || "all" }) }
+loadCSS("http://fonts.googleapis.com/css?family=Oswald");
+loadCSS("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+//]]>
+</script>
+	  
+  &lt;--</body>
 </HTML>
