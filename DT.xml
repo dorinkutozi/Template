@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
 <HTML lang='id'>
-<head>
+&lt;head&gt;
 
 <!--[if lt IE 9]>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js'> </script>
@@ -1120,7 +1120,7 @@ else return "";
 </script>
 
 <b:include data='blog' name='google-analytics'/>
-</head>
+&lt;/head&gt;&lt;!--<head/>--&gt;
 
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
 
@@ -2666,5 +2666,5 @@ loadCSS("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min
 //]]>
 </script>
 	  
-  &lt;--</body>
+  &lt;!--</body>
 </HTML>
